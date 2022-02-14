@@ -1,5 +1,10 @@
 package address;
 
+import java.io.File;  // Import the File class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.ArrayList;
+import java.util.Scanner; // Import the Scanner class to read text files
+
 import address.data.AddressBook;
 import address.data.AddressEntry;
 
@@ -14,6 +19,8 @@ class AddressBookApplication {
 
         AddressBook addressBook = new AddressBook();
         initAddressBookExercise(addressBook);
+        init("C:\\Users\\User\\IdeaProjects\\AddressBookApplication\\src\\address\\data\\AddressInputDataFile.txt", addressBook);
+        addressBook.list();
 
     }
 
@@ -25,7 +32,43 @@ class AddressBookApplication {
         ab.add(one);
         ab.add(two);
 
-        ab.list();
+    }
+
+    static void init(String fileName, AddressBook ab) {
+
+        try{
+
+            int lineFromFileCount = 0;
+            ArrayList<String> lineFromFile = new ArrayList<String>();
+            File inFile = new File(fileName);
+            Scanner myReader = new Scanner(inFile);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                lineFromFile.add(data);
+            }
+            myReader.close();
+
+            while (lineFromFileCount < lineFromFile.size()){
+
+                AddressEntry temp = new AddressEntry(lineFromFile.get(lineFromFileCount), lineFromFile.get(lineFromFileCount + 1), lineFromFile.get(lineFromFileCount + 2), lineFromFile.get(lineFromFileCount + 3), lineFromFile.get(lineFromFileCount + 4), Integer.parseInt(lineFromFile.get(lineFromFileCount + 5)), lineFromFile.get(lineFromFileCount + 6), lineFromFile.get(lineFromFileCount + 7));
+
+                ab.add(temp);
+
+
+                lineFromFileCount = lineFromFileCount + 8;
+
+            }
+
+
+        }
+        catch (FileNotFoundException e){
+
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+
+        }
+
+
 
     }
 
