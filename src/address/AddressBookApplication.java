@@ -1,9 +1,9 @@
 package address;
 
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.Scanner;
 
 import address.data.AddressBook;
 import address.data.AddressEntry;
@@ -34,6 +34,12 @@ class AddressBookApplication {
 
     }
 
+    /**
+     * init: generates AddressEntry(s) using a provided file and adds it to specified AddressBook ab
+     * @param fileName
+     * @param ab
+     */
+
     static void init(String fileName, AddressBook ab) {
 
         try{
@@ -58,8 +64,6 @@ class AddressBookApplication {
                 lineFromFileCount = lineFromFileCount + 8;
 
             }
-
-
         }
         catch (FileNotFoundException e){
 
@@ -67,9 +71,5 @@ class AddressBookApplication {
             e.printStackTrace();
 
         }
-
-
-
     }
-
 }

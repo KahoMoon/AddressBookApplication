@@ -5,6 +5,10 @@ public class AddressBook {
 
     ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
 
+    /**
+     * list AddressBook: prints out the all information of all elements in the AddressBook
+     */
+
     public void list() {
 
         for (AddressEntry i : addressEntryList) {
@@ -13,6 +17,11 @@ public class AddressBook {
         }
 
     }
+
+    /**
+     * add AddressBook: add an AddressEntry into AddressBook
+     * @param addressEntry
+     */
 
     public void add(AddressEntry addressEntry) {
 
