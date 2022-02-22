@@ -1,6 +1,12 @@
 package address.data;
 import java.util.ArrayList;
 
+/**
+ * AddressBook class stores the individual AddressEntry(s) into a collective
+ * @author kahom
+ * @since 1.00
+ */
+
 public class AddressBook {
 
     ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
@@ -20,7 +26,7 @@ public class AddressBook {
 
     /**
      * add AddressBook: add an AddressEntry into AddressBook
-     * @param addressEntry
+     * @param addressEntry the individual entry which you are adding to the address book
      */
 
     public void add(AddressEntry addressEntry) {

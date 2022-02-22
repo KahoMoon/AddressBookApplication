@@ -1,5 +1,11 @@
 package address.data;
 
+/**
+ * AddressEntry class that stores the information pertaining to a single person in the AddressBook
+ * @author kahom
+ * @since 1.00
+ */
+
 public class AddressEntry {
 
     private String firstName, lastName, street, city, state, phone, email;
@@ -21,6 +27,13 @@ public class AddressEntry {
 
     /**
      * AddressEntry(firstName, lastName, street, city, state, zip, phone, email)  initializes the member variables of AddressEntry with given parameters
+     * @param firstName the first name of the person
+     * @param lastName the last name of the person
+     * @param street the street where the person lives
+     * @param state the state in which the person resides in
+     * @param zip the zip code in which the person resides in
+     * @param phone the phone number of the person
+     * @param email the email address of the person
      */
     public AddressEntry(String firstName, String lastName, String street, String city, String state, int zip, String phone, String email) {
 
@@ -37,6 +50,7 @@ public class AddressEntry {
 
     /**
      * toString()  generates a formatted string containing all member variable values
+     * @return all the data in the entry seperated by new line
      */
     public String toString() {
         return firstName + "\n" + lastName + "\n" + street + "\n" + city + "\n" + state + "\n" + zip + "\n" + phone + "\n" + email + "\n";
@@ -44,6 +58,7 @@ public class AddressEntry {
 
     /**
      * AdressEntry(other)  creates a deep copy of other
+     * @param other  AddressEntry whose information is to be copied
      */
     public AddressEntry(AddressEntry other) {
 
@@ -61,6 +76,7 @@ public class AddressEntry {
 
     /**
      * setFirstName(firstName)  sets firstName
+     * @param firstName the name which you are setting as the first name of the entry
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -69,6 +85,7 @@ public class AddressEntry {
 
     /**
      * setLastName(lastName)  sets lastName
+     * @param lastName the name which you are setting as the last name of the entry
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -76,6 +93,7 @@ public class AddressEntry {
 
     /**
      * setStreet(street)  sets street
+     * @param street the street which you are setting as the residence of the entry
      */
     public void setStreet(String street) {
         this.street = street;
@@ -83,6 +101,7 @@ public class AddressEntry {
 
     /**
      * setCity(city)  sets city
+     * @param city the city which you are setting as the residence of the entry
      */
     public void setCity(String city) {
         this.city = city;
@@ -90,6 +109,7 @@ public class AddressEntry {
 
     /**
      * setState(state)  sets state
+     * @param state the state which you are setting as the residence of the entry
      */
     public void setState(String state) {
         this.state = state;
@@ -97,6 +117,7 @@ public class AddressEntry {
 
     /**
      * setPhone(phone)  sets phone
+     * @param phone the phone number which you are setting belonging to the entry
      */
     public void setPhone(String phone) {
         this.phone = phone;
@@ -105,6 +126,7 @@ public class AddressEntry {
 
     /**
      * setEmail(email)  sets email
+     * @param email the email address which you are setting to the entry
      */
     public void setEmail(String email) {
         this.email = email;
@@ -112,6 +134,7 @@ public class AddressEntry {
 
     /**
      * setZip(zip)  sets zip
+     * @param zip the zip code of the residence of the entry
      */
     public void setZip(int zip) {
         this.zip = zip;
@@ -119,6 +142,7 @@ public class AddressEntry {
 
     /**
      * getFirstName()  returns firstName
+     * @return the first name of the entry
      */
     public String getFirstName() {
         return firstName;
@@ -126,6 +150,7 @@ public class AddressEntry {
 
     /**
      * getLastName()  returns lastName
+     * @return the last name of the entry
      */
     public String getLastName() {
         return lastName;
@@ -133,6 +158,7 @@ public class AddressEntry {
 
     /**
      * getStreet()  returns street
+     * @return the street name of the entry
      */
     public String getStreet() {
         return street;
@@ -140,6 +166,7 @@ public class AddressEntry {
 
     /**
      * getCity()  returns city
+     * @return the city of the entry
      */
     public String getCity() {
         return city;
@@ -147,6 +174,7 @@ public class AddressEntry {
 
     /**
      * getState()  returns state
+     * @return the state of the entry
      */
     public String getState() {
         return state;
@@ -154,6 +182,7 @@ public class AddressEntry {
 
     /**
      * getPhone()  returns phone
+     * @return the phone number tied to the entry
      */
     public String getPhone() {
         return phone;
@@ -161,6 +190,7 @@ public class AddressEntry {
 
     /**
      * getEmail()  returns email
+     * @return the email address tied to the entry
      */
     public String getEmail() {
         return email;
@@ -168,6 +198,7 @@ public class AddressEntry {
 
     /**
      * getZip()  returns zip
+     * @return the zip code of the entry
      */
     public int getZip() {
         return zip;

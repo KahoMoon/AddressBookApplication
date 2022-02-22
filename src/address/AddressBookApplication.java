@@ -9,6 +9,8 @@ import address.data.AddressBook;
 import address.data.AddressEntry;
 
 /** main AddressBookApplication: purpose is to invoke some methods of the Menu classs
+ * @author kahom
+ * @since 1.00
  **/
 
 class AddressBookApplication {
@@ -24,6 +26,11 @@ class AddressBookApplication {
 
     }
 
+    /**
+     * initializes two entries and adds it to the address book
+     * @param ab the address book in which you are adding the two entries to
+     */
+
     static void initAddressBookExercise(AddressBook ab) {
 
         AddressEntry one = new AddressEntry();
@@ -36,8 +43,9 @@ class AddressBookApplication {
 
     /**
      * init: generates AddressEntry(s) using a provided file and adds it to specified AddressBook ab
-     * @param fileName
-     * @param ab
+     * @param fileName the file name of the file in which the entries will be read off of
+     * @param ab the name of the address book which you are adding the read entries into
+     * @throws FileNotFoundException if the specified file cannot be found
      */
 
     static void init(String fileName, AddressBook ab) {
