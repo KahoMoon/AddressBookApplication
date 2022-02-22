@@ -12,7 +12,7 @@ public class AddressBook {
     ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
 
     /**
-     * list AddressBook: prints out the all information of all elements in the AddressBook
+     * prints out the all information of all elements in the AddressBook
      */
 
     public void list() {
