@@ -87,4 +87,17 @@ class Menu {
 
     }
 
+    public void displayMenu() {
+
+        System.out.println("""
+                a) Loading of entries from file
+                b) Addition
+                c) Removal
+                d) Find
+                e) Listing
+                f) Quit
+                """);
+
+    }
+
 }
