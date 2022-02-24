@@ -20,16 +20,16 @@ public class Menu {
      */
     public String prompt_FirstName() {
 
-        while(!result){
+        //while(!result){
 
             in = new Scanner(System.in);
             System.out.println("ALPHABETICAL\n");
             System.out.println("-First Name-");
-            result = in.nextLine().matches(namePattern);
+            //result = in.nextLine().matches(namePattern);
 
-        }
+        //}
 
-        result = false;
+        //result = false;
         return in.nextLine();
 
     }
@@ -40,16 +40,16 @@ public class Menu {
      */
     public String prompt_LastName() {
 
-        while(!result){
+        //while(!result){
 
             in = new Scanner(System.in);
             System.out.println("ALPHABETICAL\n");
             System.out.println("-Last Name-");
-            result = in.nextLine().matches(namePattern);
+            //result = in.nextLine().matches(namePattern);
 
-        }
+        //}
 
-        result = false;
+        //result = false;
         return in.nextLine();
 
     }
@@ -60,16 +60,16 @@ public class Menu {
      */
     public String prompt_Street() {
 
-        while(!result){
+        //while(!result){
 
             in = new Scanner(System.in);
             System.out.println("ALPHANUMERICAL\n");
             System.out.println("-Street-");
-            result = in.nextLine().matches(namePattern);
+            //result = in.nextLine().matches(namePattern);
 
-        }
+        //}
 
-        result = false;
+        //result = false;
         return in.nextLine();
 
     }
@@ -80,16 +80,16 @@ public class Menu {
      */
     public String prompt_City() {
 
-        while(!result){
+        //while(!result){
 
             in = new Scanner(System.in);
             System.out.println("ALPHABETICAL\n");
             System.out.println("-City-");
-            result = in.nextLine().matches(namePattern);
+            //result = in.nextLine().matches(namePattern);
 
-        }
+        //}
 
-        result = false;
+        //result = false;
         return in.nextLine();
 
     }
@@ -100,16 +100,16 @@ public class Menu {
      */
     public String prompt_State() {
 
-        while(!result){
+        //while(!result){
 
             in = new Scanner(System.in);
             System.out.println("ALPHABETICAL\n");
             System.out.println("-State-");
-            result = in.nextLine().matches(namePattern);
+            //result = in.nextLine().matches(namePattern);
 
-        }
+       //}
 
-        result = false;
+        //result = false;
         return in.nextLine();
 
     }
@@ -151,6 +151,7 @@ public class Menu {
      */
     public String prompt_Telephone() {
 
+        in = new Scanner(System.in);
         System.out.println("ALPHABETICAL + SPECIAL\n");
         System.out.println("-Phone Number-");
         return in.nextLine();

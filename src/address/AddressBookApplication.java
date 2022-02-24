@@ -74,7 +74,6 @@ public class AddressBookApplication {
                     remove.setPhone(myMenu.prompt_Telephone());
                     remove.setEmail(myMenu.prompt_Email());
 
-                    System.out.println("Added!\n");
                     ab.remove(remove);
                     break;
 
