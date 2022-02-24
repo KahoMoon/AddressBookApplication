@@ -151,16 +151,8 @@ public class Menu {
      */
     public String prompt_Telephone() {
 
-        while(!result){
-
-            in = new Scanner(System.in);
-            System.out.println("ALPHABETICAL + SPECIAL\n");
-            System.out.println("-Phone Number-");
-            result = in.nextLine().matches(namePattern);
-
-        }
-
-        result = false;
+        System.out.println("ALPHABETICAL + SPECIAL\n");
+        System.out.println("-Phone Number-");
         return in.nextLine();
 
     }
