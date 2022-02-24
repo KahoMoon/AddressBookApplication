@@ -10,8 +10,8 @@ import java.util.Scanner;
 class Menu {
 
     /**
-     * prompt_FirstName  generates a standard output prompt for the First Name to be entered
-     * @return prompt for first name
+     * generates a standard output prompt for the First Name to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_FirstName() {
 
@@ -22,8 +22,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the Last Name to be entered
-     * @return prompt for last name
+     * prompt_LastName  generates a standard output prompt for the Last Name to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_LastName() {
 
@@ -34,8 +34,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the Street to be entered
-     * @return prompt for street name
+     * prompt_LastName  generates a standard output prompt for the Street to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_Street() {
 
@@ -46,8 +46,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the City to be entered
-     * @return prompt for name of city
+     * prompt_LastName  generates a standard output prompt for the City to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_City() {
 
@@ -58,8 +58,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the State to be entered
-     * @return prompt for state
+     * prompt_LastName  generates a standard output prompt for the State to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_State() {
 
@@ -70,8 +70,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the Zip to be entered
-     * @return prompt for zip code
+     * prompt_LastName  generates a standard output prompt for the Zip to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_Zip() {
 
@@ -82,8 +82,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the Telephone to be entered
-     * @return prompt for telephone number
+     * prompt_LastName  generates a standard output prompt for the Telephone to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_Telephone() {
 
@@ -94,8 +94,8 @@ class Menu {
     }
 
     /**
-     * prompt_LastName  generates a standard output prompt for the Email to be entered
-     * @return prompt for email address
+     * prompt_LastName  generates a standard output prompt for the Email to be entered and returns the user input
+     * @return the user input
      */
     public String prompt_Email() {
 
@@ -105,6 +105,9 @@ class Menu {
 
     }
 
+    /**
+     * displays prompt for program functions
+     */
     public void displayMenu() {
 
         System.out.println("""
