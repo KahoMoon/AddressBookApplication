@@ -10,7 +10,7 @@ import java. util. ArrayList;
 class AddressBookTest {
 
     @Test
-    public void testSizer(){
+    public void testSize(){
 
         AddressBook ab = new AddressBook();
         AddressEntry first = new AddressEntry();
@@ -28,7 +28,7 @@ class AddressBookTest {
 
 
     @Test
-    public void testlist(){
+    public void testList(){
 
         AddressBook ab = new AddressBook();
         AddressEntry first = new AddressEntry();
@@ -56,6 +56,35 @@ class AddressBookTest {
 
     }
 
+    @Test
+    public void testAdd(){
 
+        AddressBook ab = new AddressBook();
+        AddressEntry first = new AddressEntry();
+        ab.add(first);
+        Assertions.assertEquals(1, ab.size());
+
+        AddressEntry second = new AddressEntry();
+        ab.add(second);
+        Assertions.assertEquals(2, ab.size());
+
+    }
+
+    @Test
+    public void testRemove(){
+
+        AddressBook ab = new AddressBook();
+        AddressEntry first = new AddressEntry();
+        ab.add(first);
+        AddressEntry second = new AddressEntry();
+        ab.add(second);
+
+        Assertions.assertEquals(2, ab.size());
+        ab.remove(first);
+        Assertions.assertEquals(1, ab.size());
+        ab.remove(second);
+        Assertions.assertEquals(0, ab.size());
+
+    }
 
 }
