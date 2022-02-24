@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Assertions;
 
 class AddressBookTest {
 
+
+    /**
+     * checks if size() correctly returns the number of elements
+     */
     @Test
     public void testSize(){
 
@@ -25,7 +29,9 @@ class AddressBookTest {
 
     }
 
-
+    /**
+     * checks if list() correctly prints out the information from the AddressBook
+     */
     @Test
     public void testList(){
 
@@ -55,6 +61,9 @@ class AddressBookTest {
 
     }
 
+    /**
+     * checks if add() adds an entry to the AddressBook
+     */
     @Test
     public void testAdd(){
 
@@ -69,6 +78,9 @@ class AddressBookTest {
 
     }
 
+    /**
+     * checks if remove() removes an entry from AddressBook
+     */
     @Test
     public void testRemove(){
 
@@ -86,6 +98,9 @@ class AddressBookTest {
 
     }
 
+    /**
+     * checks if search() correctly identifies if entries contain information
+     */
     @Test
     public void testSearch(){
 

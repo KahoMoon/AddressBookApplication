@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 class MenuTest {
 
+    /**
+     * checks if menu options display
+     */
     @Test
     public void testDisplayMenu(){
 

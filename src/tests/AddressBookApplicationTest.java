@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Assertions;
 
 class AddressBookApplicationTest {
 
+    /**
+     * checks if init creates the entries in the specified file
+     */
     @Test
     public void shouldCreateTwoEntries(){
 

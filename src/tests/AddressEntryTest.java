@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 class AddressEntryTest {
 
+    /**
+     * checks if default constructor correctly initializes instance
+     */
     @Test
     public void testDefaultConstructor(){
 
@@ -22,6 +25,9 @@ class AddressEntryTest {
 
     }
 
+    /**
+     * checks if constructor correctly initializes instance with given arguments
+     */
     @Test
     public void testConstructor(){
 
@@ -38,6 +44,9 @@ class AddressEntryTest {
 
     }
 
+    /**
+     * checks if toString() correctly outputs entry information
+     */
     @Test
     public void testToString(){
 
@@ -57,6 +66,9 @@ class AddressEntryTest {
 
     }
 
+    /**
+     * tests every setter/getter
+     */
     @Test
     public void testSettersGetters(){
 
