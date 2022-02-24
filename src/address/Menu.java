@@ -1,5 +1,7 @@
 package address;
 
+import java.util.Scanner;
+
 /** Menu class currently only has static methods to prompt to standard output information about a Contact like name,etc
  * @author kahom
  * @since 1.00
@@ -13,7 +15,9 @@ class Menu {
      */
     public String prompt_FirstName() {
 
-        return "First Name:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("First Name: ");
+        return in.nextLine();
 
     }
 
@@ -23,7 +27,9 @@ class Menu {
      */
     public String prompt_LastName() {
 
-        return "Last Name:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Last Name: ");
+        return in.nextLine();
 
     }
 
@@ -33,7 +39,9 @@ class Menu {
      */
     public String prompt_Street() {
 
-        return "Street:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Street: ");
+        return in.nextLine();
 
     }
 
@@ -43,7 +51,9 @@ class Menu {
      */
     public String prompt_City() {
 
-        return "City:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("City: ");
+        return in.nextLine();
 
     }
 
@@ -53,7 +63,9 @@ class Menu {
      */
     public String prompt_State() {
 
-        return "State:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("State:");
+        return in.nextLine();
 
     }
 
@@ -63,7 +75,9 @@ class Menu {
      */
     public String prompt_Zip() {
 
-        return "Zip:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Zip:");
+        return in.nextLine();
 
     }
 
@@ -73,7 +87,9 @@ class Menu {
      */
     public String prompt_Telephone() {
 
-        return "Telephone:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Telephone:");
+        return in.nextLine();
 
     }
 
@@ -83,7 +99,9 @@ class Menu {
      */
     public String prompt_Email() {
 
-        return "Email:";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Email:");
+        return in.nextLine();
 
     }
 
