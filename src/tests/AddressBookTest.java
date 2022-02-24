@@ -87,4 +87,22 @@ class AddressBookTest {
 
     }
 
+    @Test
+    public void testSearch(){
+
+        AddressBook ab = new AddressBook();
+        AddressEntry first = new AddressEntry();
+        ab.add(first);
+
+        java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
+        System.setOut(new java.io.PrintStream(out));
+        ab.search("first");
+
+        Assertions.assertFalse(out.toString().isEmpty());
+
+        ab.search("99999");
+        Assertions.assertFalse(out.toString().isEmpty());
+
+    }
+
 }
