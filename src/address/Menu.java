@@ -16,7 +16,7 @@ class Menu {
     public String prompt_FirstName() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("First Name: ");
+        System.out.println("-First Name-");
         return in.nextLine();
 
     }
@@ -28,7 +28,7 @@ class Menu {
     public String prompt_LastName() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Last Name: ");
+        System.out.println("-Last Name-");
         return in.nextLine();
 
     }
@@ -40,7 +40,7 @@ class Menu {
     public String prompt_Street() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Street: ");
+        System.out.println("-Street-");
         return in.nextLine();
 
     }
@@ -52,7 +52,7 @@ class Menu {
     public String prompt_City() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("City: ");
+        System.out.println("-City-");
         return in.nextLine();
 
     }
@@ -64,7 +64,7 @@ class Menu {
     public String prompt_State() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("State:");
+        System.out.println("-State-");
         return in.nextLine();
 
     }
@@ -73,11 +73,11 @@ class Menu {
      * prompt_LastName  generates a standard output prompt for the Zip to be entered and returns the user input
      * @return the user input
      */
-    public String prompt_Zip() {
+    public int prompt_Zip() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Zip:");
-        return in.nextLine();
+        System.out.println("-Zip-");
+        return Integer.parseInt(in.nextLine());
 
     }
 
@@ -88,7 +88,7 @@ class Menu {
     public String prompt_Telephone() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Telephone:");
+        System.out.println("-Telephone-");
         return in.nextLine();
 
     }
@@ -100,7 +100,7 @@ class Menu {
     public String prompt_Email() {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Email:");
+        System.out.println("-Email-");
         return in.nextLine();
 
     }

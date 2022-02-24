@@ -18,12 +18,48 @@ class AddressBookApplication {
     public static void main(String args[]) {
 
         Menu myMenu = new Menu();
-        myMenu.displayMenu();
+        AddressBook ab = new AddressBook();
+        String answer = "garbage";
+        String innerAnswer = null;
+        Scanner in = new Scanner(System.in);
 
-        AddressBook addressBook = new AddressBook();
-        initAddressBookExercise(addressBook);
-        init("C:\\Users\\User\\IdeaProjects\\AddressBookApplication\\src\\address\\data\\AddressInputDataFile.txt", addressBook);
-        addressBook.list();
+        while(!answer.toLowerCase().equals("f")) {
+
+            myMenu.displayMenu();
+            answer = in.nextLine();
+            System.out.println("\n");
+
+            switch(answer){
+                case "a":
+
+                    System.out.println("Enter the path of the file: ");
+                    innerAnswer = in.nextLine();
+                    init(innerAnswer, ab);
+                    System.out.print("Entries added from " + innerAnswer + "\n");
+                    ab.list();
+                    break;
+
+                case "b":
+
+                    AddressEntry temp = new AddressEntry();
+
+                    temp.setFirstName(myMenu.prompt_FirstName());
+                    temp.setLastName(myMenu.prompt_LastName());
+                    temp.setStreet(myMenu.prompt_Street());
+                    temp.setCity(myMenu.prompt_City());
+                    temp.setState(myMenu.prompt_State());
+                    temp.setZip(myMenu.prompt_Zip());
+                    temp.setPhone(myMenu.prompt_Telephone());
+                    temp.setEmail(myMenu.prompt_Email());
+
+                    System.out.println("Added!\n");
+                    ab.add(temp);
+                    break;
+
+            }
+
+        }
+
 
     }
 
