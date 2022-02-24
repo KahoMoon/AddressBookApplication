@@ -23,6 +23,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHABETICAL\n");
             System.out.println("-First Name-");
             result = in.nextLine().matches(namePattern);
 
@@ -42,6 +43,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHABETICAL\n");
             System.out.println("-Last Name-");
             result = in.nextLine().matches(namePattern);
 
@@ -61,6 +63,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHANUMERICAL\n");
             System.out.println("-Street-");
             result = in.nextLine().matches(namePattern);
 
@@ -80,6 +83,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHABETICAL\n");
             System.out.println("-City-");
             result = in.nextLine().matches(namePattern);
 
@@ -99,6 +103,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHABETICAL\n");
             System.out.println("-State-");
             result = in.nextLine().matches(namePattern);
 
@@ -122,6 +127,7 @@ public class Menu {
             try{
 
                 in = new Scanner(System.in);
+                System.out.println("NUMERICAL\n");
                 System.out.println("-Zip-");
                 temp = Integer.parseInt(in.nextLine());
                 result = true;
@@ -148,6 +154,7 @@ public class Menu {
         while(!result){
 
             in = new Scanner(System.in);
+            System.out.println("ALPHABETICAL + SPECIAL\n");
             System.out.println("-Phone Number-");
             result = in.nextLine().matches(namePattern);
 
@@ -165,6 +172,7 @@ public class Menu {
     public String prompt_Email() {
 
         in = new Scanner(System.in);
+        System.out.println("ALPHABETICAL + SPECIAL\n");
         System.out.println("-Email-");
         return in.nextLine();
 
