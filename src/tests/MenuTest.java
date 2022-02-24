@@ -1,13 +1,8 @@
 package tests;
 
-import address.data.AddressBook;
-import org.junit.jupiter.api.BeforeEach;
-import address.data.AddressEntry;
+import address.Menu;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import address.Menu;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MenuTest {
 

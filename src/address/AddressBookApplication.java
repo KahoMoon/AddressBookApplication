@@ -8,19 +8,24 @@ import java.util.Scanner;
 import address.data.AddressBook;
 import address.data.AddressEntry;
 
-/** main AddressBookApplication: purpose is to invoke some methods of the Menu classs
+/** main AddressBookApplication: purpose is to invoke some methods of the Menu class
  * @author kahom
  * @since 1.00
  **/
 
 public class AddressBookApplication {
 
+    /**
+     * displays and allows the user to choose functions
+     * @param args command line arguments, not applicable
+     */
+
     public static void main(String args[]) {
 
         Menu myMenu = new Menu();
         AddressBook ab = new AddressBook();
-        String answer = "garbage";
-        String innerAnswer = null;
+        String answer = "garbage";  //holds user input pertaining to the main menu selection
+        String innerAnswer = null;  //holds input from user for functions within each menu case
         Scanner in = new Scanner(System.in);
 
         while(!answer.toLowerCase().equals("f")) {
@@ -140,7 +145,7 @@ public class AddressBookApplication {
                 ab.add(temp);
 
 
-                lineFromFileCount = lineFromFileCount + 8;
+                lineFromFileCount = lineFromFileCount + 8;  //increments by 8 because of 8 variables in AddressEntry
 
             }
         }

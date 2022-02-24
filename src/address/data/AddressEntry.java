@@ -12,7 +12,7 @@ public class AddressEntry {
     private int zip;
 
     /**
-     * AddressEntry()  initializes all members variables of AddressEntry with appropriate placeholders
+     * initializes all members variables of AddressEntry with appropriate placeholders
      */
     public AddressEntry() {
         firstName = "first";
@@ -26,7 +26,7 @@ public class AddressEntry {
     }
 
     /**
-     * AddressEntry(firstName, lastName, street, city, state, zip, phone, email)  initializes the member variables of AddressEntry with given parameters
+     * initializes the member variables of AddressEntry with given parameters
      * @param firstName the first name of the person
      * @param lastName the last name of the person
      * @param street the street where the person lives
@@ -49,7 +49,7 @@ public class AddressEntry {
     }
 
     /**
-     * toString()  generates a formatted string containing all member variable values
+     * generates a formatted string containing all member variable values
      * @return all the data in the entry seperated by new line
      */
     public String toString() {
@@ -75,7 +75,7 @@ public class AddressEntry {
 
 
     /**
-     * setFirstName(firstName)  sets firstName
+     * sets firstName
      * @param firstName the name which you are setting as the first name of the entry
      */
     public void setFirstName(String firstName) {
@@ -84,7 +84,7 @@ public class AddressEntry {
 
 
     /**
-     * setLastName(lastName)  sets lastName
+     * sets lastName
      * @param lastName the name which you are setting as the last name of the entry
      */
     public void setLastName(String lastName) {
@@ -92,7 +92,7 @@ public class AddressEntry {
     }
 
     /**
-     * setStreet(street)  sets street
+     * sets street
      * @param street the street which you are setting as the residence of the entry
      */
     public void setStreet(String street) {
@@ -100,7 +100,7 @@ public class AddressEntry {
     }
 
     /**
-     * setCity(city)  sets city
+     * sets city
      * @param city the city which you are setting as the residence of the entry
      */
     public void setCity(String city) {
@@ -108,7 +108,7 @@ public class AddressEntry {
     }
 
     /**
-     * setState(state)  sets state
+     * sets state
      * @param state the state which you are setting as the residence of the entry
      */
     public void setState(String state) {
@@ -116,7 +116,7 @@ public class AddressEntry {
     }
 
     /**
-     * setPhone(phone)  sets phone
+     * sets phone
      * @param phone the phone number which you are setting belonging to the entry
      */
     public void setPhone(String phone) {
@@ -125,7 +125,7 @@ public class AddressEntry {
 
 
     /**
-     * setEmail(email)  sets email
+     * sets email
      * @param email the email address which you are setting to the entry
      */
     public void setEmail(String email) {
@@ -133,7 +133,7 @@ public class AddressEntry {
     }
 
     /**
-     * setZip(zip)  sets zip
+     * sets zip
      * @param zip the zip code of the residence of the entry
      */
     public void setZip(int zip) {
@@ -141,7 +141,7 @@ public class AddressEntry {
     }
 
     /**
-     * getFirstName()  returns firstName
+     * returns firstName
      * @return the first name of the entry
      */
     public String getFirstName() {
@@ -149,7 +149,7 @@ public class AddressEntry {
     }
 
     /**
-     * getLastName()  returns lastName
+     * returns lastName
      * @return the last name of the entry
      */
     public String getLastName() {
@@ -157,7 +157,7 @@ public class AddressEntry {
     }
 
     /**
-     * getStreet()  returns street
+     * returns street
      * @return the street name of the entry
      */
     public String getStreet() {
@@ -165,7 +165,7 @@ public class AddressEntry {
     }
 
     /**
-     * getCity()  returns city
+     * returns city
      * @return the city of the entry
      */
     public String getCity() {
@@ -173,7 +173,7 @@ public class AddressEntry {
     }
 
     /**
-     * getState()  returns state
+     * returns state
      * @return the state of the entry
      */
     public String getState() {
@@ -181,7 +181,7 @@ public class AddressEntry {
     }
 
     /**
-     * getPhone()  returns phone
+     * returns phone
      * @return the phone number tied to the entry
      */
     public String getPhone() {
@@ -189,7 +189,7 @@ public class AddressEntry {
     }
 
     /**
-     * getEmail()  returns email
+     * returns email
      * @return the email address tied to the entry
      */
     public String getEmail() {
@@ -197,7 +197,7 @@ public class AddressEntry {
     }
 
     /**
-     * getZip()  returns zip
+     * returns zip
      * @return the zip code of the entry
      */
     public int getZip() {

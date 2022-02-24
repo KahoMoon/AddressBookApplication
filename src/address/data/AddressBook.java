@@ -1,10 +1,16 @@
 package address.data;
 import java.util.ArrayList;
 
+/**
+ * AddressBook class that stores collection of AddressEntries
+ * @author kahom
+ * @since 1.00
+ */
+
 public class AddressBook {
 
     ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
-    int size = 0;
+    int size = 0;   //holds the number of elements
 
     /**
      * returns the number of entries in the address book
@@ -17,7 +23,7 @@ public class AddressBook {
     }
 
     /**
-     * list AddressBook: prints out the all information of all elements in the AddressBook
+     * prints out the all information of all elements in the AddressBook
      */
 
     public void list() {
@@ -30,8 +36,8 @@ public class AddressBook {
     }
 
     /**
-     * add AddressBook: add an AddressEntry into AddressBook
-     * @param addressEntry the entry you want to add to the address book
+     * adds an AddressEntry into AddressBook
+     * @param addressEntry the entry you want added to the address book
      */
 
     public void add(AddressEntry addressEntry) {
@@ -56,7 +62,6 @@ public class AddressBook {
      * returns entries that contain the specified search prompt along with index
      * @param prompt the string you are searching for
      */
-
     public void search(String prompt) {
 
         int index = 0;
@@ -81,6 +86,7 @@ public class AddressBook {
      * returns entries that contain the specified integer (zip) along with the index
      * @param prompt the integer you are searching for
      */
+    //overloaded for when entering ZIP specifically
     public void search(int prompt) {
 
         int index = 0;
