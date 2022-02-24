@@ -10,7 +10,7 @@ import java.util.Scanner;
 class Menu {
 
     String namePattern = "[^\\p{P}|^\\d+]+";
-    String zipPattern = "[0-9]+";
+    //String zipPattern = "[0-9]+";
     boolean result = false;
     Scanner in;
 
@@ -115,16 +115,27 @@ class Menu {
      */
     public int prompt_Zip() {
 
+        int temp = 0;
+
         while(!result){
 
-            in = new Scanner(System.in);
-            System.out.println("-Zip-");
-            result = in.nextLine().matches(namePattern);
+            try{
+
+                in = new Scanner(System.in);
+                System.out.println("-Zip-");
+                temp = Integer.parseInt(in.nextLine());
+                result = true;
+
+            }
+            catch(NumberFormatException e){
+
+            }
 
         }
 
         result = false;
-        return Integer.parseInt(in.nextLine());
+        System.out.println("\n");
+        return temp;
 
     }
 
@@ -153,15 +164,8 @@ class Menu {
      */
     public String prompt_Email() {
 
-        while(!result){
-
-            in = new Scanner(System.in);
-            System.out.println("-Email-");
-            result = in.nextLine().matches(namePattern);
-
-        }
-
-        result = false;
+        in = new Scanner(System.in);
+        System.out.println("-Email-");
         return in.nextLine();
 
     }
