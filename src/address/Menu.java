@@ -10,6 +10,7 @@ import java.util.Scanner;
 class Menu {
 
     String namePattern = "[^\\p{P}|^\\d+]+";
+    String zipPattern = "[0-9]+";
     boolean result = false;
     Scanner in;
 
@@ -38,8 +39,15 @@ class Menu {
      */
     public String prompt_LastName() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-Last Name-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-Last Name-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
@@ -50,8 +58,15 @@ class Menu {
      */
     public String prompt_Street() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-Street-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-Street-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
@@ -62,8 +77,15 @@ class Menu {
      */
     public String prompt_City() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-City-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-City-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
@@ -74,8 +96,15 @@ class Menu {
      */
     public String prompt_State() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-State-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-State-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
@@ -86,8 +115,15 @@ class Menu {
      */
     public int prompt_Zip() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-Zip-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-Zip-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return Integer.parseInt(in.nextLine());
 
     }
@@ -98,8 +134,15 @@ class Menu {
      */
     public String prompt_Telephone() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-Telephone-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-Phone Number-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
@@ -110,8 +153,15 @@ class Menu {
      */
     public String prompt_Email() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-Email-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-Email-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
