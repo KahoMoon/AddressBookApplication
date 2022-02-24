@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class AddressBook {
 
-    ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
+    ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();   //holds the AddressEntries
     int size = 0;   //holds the number of elements
 
     /**

@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 public class Menu {
 
-    String namePattern = "[^\\p{P}|^\\d+]+";
-    //String zipPattern = "[0-9]+";
-    boolean result = false;
-    Scanner in;
+    String namePattern = "[^\\p{P}|^\\d+]+";    //used for checking user input validity
+    //String zipPattern = "[0-9]+"; //used for checking user zip input validity
+    boolean result = false; //shows if input is valid or not
+    Scanner in; //reads in input
 
     /**
      * generates a standard output prompt for the First Name to be entered and returns the user input
