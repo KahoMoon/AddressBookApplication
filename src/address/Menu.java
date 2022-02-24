@@ -9,14 +9,25 @@ import java.util.Scanner;
 
 class Menu {
 
+    String namePattern = "[^\\p{P}|^\\d+]+";
+    boolean result = false;
+    Scanner in;
+
     /**
      * generates a standard output prompt for the First Name to be entered and returns the user input
      * @return the user input
      */
     public String prompt_FirstName() {
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("-First Name-");
+        while(!result){
+
+            in = new Scanner(System.in);
+            System.out.println("-First Name-");
+            result = in.nextLine().matches(namePattern);
+
+        }
+
+        result = false;
         return in.nextLine();
 
     }
