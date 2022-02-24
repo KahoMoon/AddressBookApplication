@@ -5,7 +5,6 @@ import address.data.AddressBook;
 import address.data.AddressEntry;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import java. util. ArrayList;
 
 class AddressBookTest {
 

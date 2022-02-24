@@ -1,12 +1,8 @@
 package tests;
 
-import address.AddressBookApplication;
-import address.data.AddressBook;
 import address.data.AddressEntry;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import org.testng.Assert;
-import org.testng.asserts.Assertion;
+import org.junit.jupiter.api.Test;
 
 
 class AddressEntryTest {

@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @since 1.00
  **/
 
-class Menu {
+public class Menu {
 
     String namePattern = "[^\\p{P}|^\\d+]+";
     //String zipPattern = "[0-9]+";
