@@ -57,7 +57,7 @@ public class AddressEntry {
     }
 
     /**
-     * AdressEntry(other)  creates a deep copy of other
+     * creates a deep copy of other
      * @param other  AddressEntry whose information is to be copied
      */
     public AddressEntry(AddressEntry other) {
