@@ -18,6 +18,7 @@ class AddressBookApplication {
     public static void main(String args[]) {
 
         Menu myMenu = new Menu();
+        myMenu.displayMenu();
 
         AddressBook addressBook = new AddressBook();
         initAddressBookExercise(addressBook);
