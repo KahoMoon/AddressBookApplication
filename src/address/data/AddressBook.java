@@ -1,10 +1,20 @@
 package address.data;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class AddressBook {
 
     ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
+    int size = 0;
+
+    /**
+     * returns the number of entries in the address book
+     * @return the number of entries in the address book
+     */
+    public int size() {
+
+        return size;
+
+    }
 
     /**
      * list AddressBook: prints out the all information of all elements in the AddressBook
@@ -27,6 +37,7 @@ public class AddressBook {
     public void add(AddressEntry addressEntry) {
 
         addressEntryList.add(addressEntry);
+        size++;
 
     }
 
@@ -37,6 +48,7 @@ public class AddressBook {
     public void remove(AddressEntry addressEntry) {
 
         addressEntryList.remove(addressEntry);
+        size--;
 
     }
 

@@ -13,7 +13,7 @@ import address.data.AddressEntry;
  * @since 1.00
  **/
 
-class AddressBookApplication {
+public class AddressBookApplication {
 
     public static void main(String args[]) {
 
@@ -105,7 +105,7 @@ class AddressBookApplication {
     static void initAddressBookExercise(AddressBook ab) {
 
         AddressEntry one = new AddressEntry();
-        AddressEntry two = new AddressEntry("Kaho", "Moon", "street", "Hayward", "California", 99999, "510999999", "thisisanemail@gmail.com");
+        AddressEntry two = new AddressEntry("Kaho", "Moon", "street", "Hayward", "California", 99999, "thisisanemail@gmail.com", "510999999");
 
         ab.add(one);
         ab.add(two);
@@ -119,7 +119,7 @@ class AddressBookApplication {
      * @throws FileNotFoundException if the specified file cannot be found
      */
 
-    static void init(String fileName, AddressBook ab) {
+    public static void init(String fileName, AddressBook ab) {
 
         try{
 
