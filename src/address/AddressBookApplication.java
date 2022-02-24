@@ -56,6 +56,40 @@ class AddressBookApplication {
                     ab.add(temp);
                     break;
 
+                case "c":
+
+                    AddressEntry remove = new AddressEntry();
+
+                    remove.setFirstName(myMenu.prompt_FirstName());
+                    remove.setLastName(myMenu.prompt_LastName());
+                    remove.setStreet(myMenu.prompt_Street());
+                    remove.setCity(myMenu.prompt_City());
+                    remove.setState(myMenu.prompt_State());
+                    remove.setZip(myMenu.prompt_Zip());
+                    remove.setPhone(myMenu.prompt_Telephone());
+                    remove.setEmail(myMenu.prompt_Email());
+
+                    System.out.println("Added!\n");
+                    ab.remove(remove);
+                    break;
+
+                case "d":
+
+                    System.out.println("Enter the path of the file: ");
+                    innerAnswer = in.nextLine();
+
+                    ab.search(innerAnswer);
+                    break;
+
+                case "e":
+
+                    ab.list();
+                    break;
+
+                case "f":
+
+                    break;
+
             }
 
         }
