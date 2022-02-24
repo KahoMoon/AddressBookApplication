@@ -4,6 +4,9 @@ import address.Menu;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * tests Menu
+ */
 class MenuTest {
 
     /**

@@ -4,7 +4,9 @@ import address.data.AddressEntry;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * tests AddressEntry
+ */
 class AddressEntryTest {
 
     /**
