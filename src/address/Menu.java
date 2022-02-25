@@ -77,7 +77,7 @@ public class Menu {
 
             isValid = true;
             System.out.println("Invalid Input: contains a non-alphabetic character\n");
-            System.out.print("Laast Name: ");
+            System.out.print("Last Name: ");
             userInput = in.nextLine();
 
             for(char c : userInput.toCharArray()){
@@ -101,17 +101,10 @@ public class Menu {
      */
     public String prompt_Street() {
 
-        //while(!result){
-
-            in = new Scanner(System.in);
-            System.out.println("ALPHANUMERICAL\n");
-            System.out.println("-Street-");
-            //result = in.nextLine().matches(namePattern);
-
-        //}
-
-        //result = false;
-        return in.nextLine();
+        System.out.print("Street: ");
+        userInput = in.nextLine();
+        System.out.print("\n");
+        return userInput;
 
     }
 
@@ -121,17 +114,36 @@ public class Menu {
      */
     public String prompt_City() {
 
-        //while(!result){
+        System.out.print("City: ");
+        userInput = in.nextLine();
 
-            in = new Scanner(System.in);
-            System.out.println("ALPHABETICAL\n");
-            System.out.println("-City-");
-            //result = in.nextLine().matches(namePattern);
+        for(char c : userInput.toCharArray()){
 
-        //}
+            if(!Character.isLetter(c)) {
+                isValid = false;
+            }
 
-        //result = false;
-        return in.nextLine();
+        }
+
+        while (!isValid){
+
+            isValid = true;
+            System.out.println("Invalid Input: contains a non-alphabetic character\n");
+            System.out.print("City: ");
+            userInput = in.nextLine();
+
+            for(char c : userInput.toCharArray()){
+
+                if(!Character.isLetter(c)) {
+                    isValid = false;
+                }
+
+            }
+
+        }
+
+        System.out.print("\n");
+        return userInput;
 
     }
 
@@ -141,17 +153,36 @@ public class Menu {
      */
     public String prompt_State() {
 
-        //while(!result){
+        System.out.print("State: ");
+        userInput = in.nextLine();
 
-            in = new Scanner(System.in);
-            System.out.println("ALPHABETICAL\n");
-            System.out.println("-State-");
-            //result = in.nextLine().matches(namePattern);
+        for(char c : userInput.toCharArray()){
 
-       //}
+            if(!Character.isLetter(c)) {
+                isValid = false;
+            }
 
-        //result = false;
-        return in.nextLine();
+        }
+
+        while (!isValid){
+
+            isValid = true;
+            System.out.println("Invalid Input: contains a non-alphabetic character\n");
+            System.out.print("State: ");
+            userInput = in.nextLine();
+
+            for(char c : userInput.toCharArray()){
+
+                if(!Character.isLetter(c)) {
+                    isValid = false;
+                }
+
+            }
+
+        }
+
+        System.out.print("\n");
+        return userInput;
 
     }
 
@@ -161,28 +192,47 @@ public class Menu {
      */
     public int prompt_Zip() {
 
-        int temp = 0;
+        System.out.print("Zip: ");
+        userInput = in.nextLine();
 
-        while(!result){
+        try{
 
-            try{
+            int zipInput = Integer.parseInt(in.nextLine());
 
-                in = new Scanner(System.in);
-                System.out.println("NUMERICAL\n");
-                System.out.println("-Zip-");
-                temp = Integer.parseInt(in.nextLine());
-                result = true;
+        }catch(NumberFormatException e){
 
+
+
+        }
+
+
+        for(char c : userInput.toCharArray()){
+
+            if(!Character.isLetter(c)) {
+                isValid = false;
             }
-            catch(NumberFormatException e){
+
+        }
+
+        while (!isValid){
+
+            isValid = true;
+            System.out.println("Invalid Input: contains a non-alphabetic character\n");
+            System.out.print("Laast Name: ");
+            userInput = in.nextLine();
+
+            for(char c : userInput.toCharArray()){
+
+                if(!Character.isLetter(c)) {
+                    isValid = false;
+                }
 
             }
 
         }
 
-        result = false;
-        System.out.println("\n");
-        return temp;
+        System.out.print("\n");
+        return zipInput;
 
     }
 
