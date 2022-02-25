@@ -14,8 +14,8 @@ public class Menu {
     boolean result = false; //shows if input is valid or not
 
     Scanner in = new Scanner(System.in); //reads in input
-    String userInput = "99999";
-    boolean isValid = false;
+    String userInput;
+    boolean isValid = true;
 
     /**
      * generates a standard output prompt for the First Name to be entered and returns the user input
@@ -23,7 +23,6 @@ public class Menu {
      */
     public String prompt_FirstName() {
 
-        System.out.println("ALPHABETICAL");
         System.out.print("First Name: ");
         userInput = in.nextLine();
 
@@ -37,6 +36,7 @@ public class Menu {
 
         while (!isValid){
 
+            isValid = true;
             System.out.println("Invalid Input: contains a non-alphabetic character\n");
             System.out.print("First Name: ");
             userInput = in.nextLine();
@@ -51,6 +51,7 @@ public class Menu {
 
         }
 
+        System.out.print("\n");
         return userInput;
 
     }
@@ -61,17 +62,36 @@ public class Menu {
      */
     public String prompt_LastName() {
 
-        //while(!result){
+        System.out.print("Last Name: ");
+        userInput = in.nextLine();
 
-            in = new Scanner(System.in);
-            System.out.println("ALPHABETICAL\n");
-            System.out.println("-Last Name-");
-            //result = in.nextLine().matches(namePattern);
+        for(char c : userInput.toCharArray()){
 
-        //}
+            if(!Character.isLetter(c)) {
+                isValid = false;
+            }
 
-        //result = false;
-        return in.nextLine();
+        }
+
+        while (!isValid){
+
+            isValid = true;
+            System.out.println("Invalid Input: contains a non-alphabetic character\n");
+            System.out.print("Laast Name: ");
+            userInput = in.nextLine();
+
+            for(char c : userInput.toCharArray()){
+
+                if(!Character.isLetter(c)) {
+                    isValid = false;
+                }
+
+            }
+
+        }
+
+        System.out.print("\n");
+        return userInput;
 
     }
 
