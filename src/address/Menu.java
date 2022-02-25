@@ -12,7 +12,10 @@ public class Menu {
     String namePattern = "[^\\p{P}|^\\d+]+";    //used for checking user input validity
     //String zipPattern = "[0-9]+"; //used for checking user zip input validity
     boolean result = false; //shows if input is valid or not
-    Scanner in; //reads in input
+
+    Scanner in = new Scanner(System.in); //reads in input
+    String userInput = "99999";
+    boolean isValid = false;
 
     /**
      * generates a standard output prompt for the First Name to be entered and returns the user input
@@ -20,17 +23,35 @@ public class Menu {
      */
     public String prompt_FirstName() {
 
-        //while(!result){
+        System.out.println("ALPHABETICAL");
+        System.out.print("First Name: ");
+        userInput = in.nextLine();
 
-            in = new Scanner(System.in);
-            System.out.println("ALPHABETICAL\n");
-            System.out.println("-First Name-");
-            //result = in.nextLine().matches(namePattern);
+        for(char c : userInput.toCharArray()){
 
-        //}
+            if(!Character.isLetter(c)) {
+                isValid = false;
+            }
 
-        //result = false;
-        return in.nextLine();
+        }
+
+        while (!isValid){
+
+            System.out.println("Invalid Input: contains a non-alphabetic character\n");
+            System.out.print("First Name: ");
+            userInput = in.nextLine();
+
+            for(char c : userInput.toCharArray()){
+
+                if(!Character.isLetter(c)) {
+                    isValid = false;
+                }
+
+            }
+
+        }
+
+        return userInput;
 
     }
 
