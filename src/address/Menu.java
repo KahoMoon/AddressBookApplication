@@ -195,20 +195,9 @@ public class Menu {
         System.out.print("Zip: ");
         userInput = in.nextLine();
 
-        try{
-
-            int zipInput = Integer.parseInt(in.nextLine());
-
-        }catch(NumberFormatException e){
-
-
-
-        }
-
-
         for(char c : userInput.toCharArray()){
 
-            if(!Character.isLetter(c)) {
+            if(!Character.isDigit(c)) {
                 isValid = false;
             }
 
@@ -217,13 +206,13 @@ public class Menu {
         while (!isValid){
 
             isValid = true;
-            System.out.println("Invalid Input: contains a non-alphabetic character\n");
-            System.out.print("Laast Name: ");
+            System.out.println("Invalid Input: contains a alphabetic character\n");
+            System.out.print("Zip: ");
             userInput = in.nextLine();
 
             for(char c : userInput.toCharArray()){
 
-                if(!Character.isLetter(c)) {
+                if(!Character.isDigit(c)) {
                     isValid = false;
                 }
 
@@ -232,7 +221,7 @@ public class Menu {
         }
 
         System.out.print("\n");
-        return zipInput;
+        return Integer.parseInt(userInput);
 
     }
 
@@ -242,10 +231,10 @@ public class Menu {
      */
     public String prompt_Telephone() {
 
-        in = new Scanner(System.in);
-        System.out.println("ALPHABETICAL + SPECIAL\n");
-        System.out.println("-Phone Number-");
-        return in.nextLine();
+        System.out.print("Phone: ");
+        userInput = in.nextLine();
+        System.out.print("\n");
+        return userInput;
 
     }
 
@@ -255,10 +244,10 @@ public class Menu {
      */
     public String prompt_Email() {
 
-        in = new Scanner(System.in);
-        System.out.println("ALPHABETICAL + SPECIAL\n");
-        System.out.println("-Email-");
-        return in.nextLine();
+        System.out.print("Email: ");
+        userInput = in.nextLine();
+        System.out.print("\n");
+        return userInput;
 
     }
 
