@@ -25,19 +25,19 @@ public class AddressBookApplication {
         Menu myMenu = new Menu();
         AddressBook ab = new AddressBook();
         String answer = "garbage";  //holds user input pertaining to the main menu selection
-        String innerAnswer = null;  //holds input from user for functions within each menu case
+        String innerAnswer;  //holds input from user for functions within each menu case
         Scanner in = new Scanner(System.in);
 
-        while(!answer.toLowerCase().equals("f")) {
+        while(!answer.equalsIgnoreCase("f")) {
 
             myMenu.displayMenu();
             answer = in.nextLine();
-            System.out.println("\n");
+            System.out.print("\n");
 
             switch(answer){
                 case "a":
 
-                    System.out.println("Enter the path of the file: ");
+                    System.out.print("Enter the path of the file: ");
                     innerAnswer = in.nextLine();
                     init(innerAnswer, ab);
                     System.out.print("Entries added from " + innerAnswer + "\n");
@@ -57,7 +57,7 @@ public class AddressBookApplication {
                     temp.setPhone(myMenu.prompt_Telephone());
                     temp.setEmail(myMenu.prompt_Email());
 
-                    System.out.println("Added!\n");
+                    System.out.print("\nAdded!");
                     ab.add(temp);
                     break;
 
@@ -79,7 +79,7 @@ public class AddressBookApplication {
 
                 case "d":
 
-                    System.out.println("Enter the path of the file: ");
+                    System.out.print("What are you looking for? ");
                     innerAnswer = in.nextLine();
 
                     ab.search(innerAnswer);
@@ -92,6 +92,7 @@ public class AddressBookApplication {
 
                 case "f":
 
+                    System.out.print("Goodbye");
                     break;
 
             }
