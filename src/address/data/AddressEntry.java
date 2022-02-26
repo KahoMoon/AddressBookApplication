@@ -53,7 +53,9 @@ public class AddressEntry {
      * @return all the data in the entry seperated by new line
      */
     public String toString() {
+
         return firstName + "\n" + lastName + "\n" + street + "\n" + city + "\n" + state + "\n" + zip + "\n" + phone + "\n" + email + "\n";
+
     }
 
     /**

@@ -1,7 +1,7 @@
 package address.data;
+
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 /**
@@ -28,7 +28,6 @@ public class AddressBook {
     /**
      * prints out the all information of all elements in the AddressBook
      */
-
     public void list() {
 
         for (AddressEntry i : addressEntryList) {
@@ -42,7 +41,6 @@ public class AddressBook {
      * adds an AddressEntry into AddressBook
      * @param addressEntry the entry you want added to the address book
      */
-
     public void add(AddressEntry addressEntry) {
 
         addressEntryList.add(addressEntry);
@@ -51,7 +49,7 @@ public class AddressBook {
     }
 
     /**
-     * removes a specified entry from the address book
+     * removes a specified entry from a given index in the address book
      */
     public void removeWrapper(int index) {
 
@@ -61,16 +59,17 @@ public class AddressBook {
     }
 
     /**
-     * returns entries that contain the specified search prompt along with index
+     * returns set containing entries that have the specified search prompt along with index
      * @param prompt the string you are searching for
      */
     public Set<Integer> search(String prompt) {
 
-        int index = 0;
-        Set<Integer> indexList = new HashSet<Integer>();
+        int index = 0;  //index of the AddressBook
+        Set<Integer> indexList = new HashSet<Integer>();    //holds the indexes of the entries that fit the search prompt
 
         for (AddressEntry i : addressEntryList) {
 
+            //checks if any of the AddressEntry fields fit the search prompt
             if (i.getFirstName().toLowerCase().contains(prompt.toLowerCase()) || i.getLastName().toLowerCase().contains(prompt.toLowerCase()) || i.getStreet().toLowerCase().contains(prompt.toLowerCase()) || i.getCity().toLowerCase().contains(prompt.toLowerCase()) || i.getState().toLowerCase().contains(prompt.toLowerCase()) || i.getPhone().toLowerCase().contains(prompt.toLowerCase()) || i.getEmail().toLowerCase().contains(prompt.toLowerCase())) {
 
                 System.out.println("\nIndex: " + index + "\n");
@@ -93,23 +92,28 @@ public class AddressBook {
      * @param prompt the integer you are searching for
      */
     //overloaded for when entering ZIP specifically
-    public void search(int prompt) {
+    public Set<Integer> search(int prompt) {
 
-        int index = 0;
+        int index = 0;  //index of the AddressBook
+        Set<Integer> indexList = new HashSet<Integer>();    //holds the indexes of the entries that fit the search prompt
 
         for (AddressEntry i : addressEntryList) {
 
+            //checks if zip fits the search prompt
             if (i.getZip() == prompt) {
 
-                System.out.println("Index: " + index + "\n");
+                System.out.println("\nIndex: " + index + "\n");
                 System.out.println(i.toString());
-                System.out.println(("\n"));
+                System.out.print(("\n"));
 
             }
 
+            indexList.add(index);
             index++;
 
         }
+
+        return indexList;
 
     }
 

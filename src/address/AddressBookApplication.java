@@ -22,11 +22,11 @@ public class AddressBookApplication {
 
     public static void main(String args[]) {
 
-        Menu myMenu = new Menu();
-        AddressBook ab = new AddressBook();
+        Menu myMenu = new Menu();   //main Menu object
+        AddressBook ab = new AddressBook(); //main AddressBook object
         String answer = "garbage";  //holds user input pertaining to the main menu selection
-        String innerAnswer;  //holds input from user for functions within each menu case
-        Scanner in = new Scanner(System.in);
+        String innerAnswer;  //holds user input for functions within each menu case
+        Scanner in = new Scanner(System.in);    //object to read in user input
 
         while(!answer.equalsIgnoreCase("f")) {
 
@@ -35,6 +35,8 @@ public class AddressBookApplication {
             System.out.print("\n");
 
             switch(answer){
+
+                //add entries from a file
                 case "a":
 
                     System.out.print("Enter the path of the file: ");
@@ -44,6 +46,7 @@ public class AddressBookApplication {
                     ab.list();
                     break;
 
+                //add entry
                 case "b":
 
                     AddressEntry temp = new AddressEntry();
@@ -57,16 +60,18 @@ public class AddressBookApplication {
                     temp.setPhone(myMenu.prompt_Telephone());
                     temp.setEmail(myMenu.prompt_Email());
 
-                    System.out.print("\nAdded!");
+                    System.out.println("Added!\n");
                     ab.add(temp);
                     break;
 
+                //remove entry
                 case "c":
 
                     System.out.print("Which index are you removing? ");
                     innerAnswer = in.nextLine();
                     boolean isValid = true;
 
+                    //input validation
                     for(char c : innerAnswer.toCharArray()){
 
                         if(!Character.isDigit(c)) {
@@ -93,9 +98,21 @@ public class AddressBookApplication {
                     }
 
                     System.out.print("\n");
-                    ab.removeWrapper(Integer.parseInt(innerAnswer));
+
+                    if(Integer.parseInt(innerAnswer) < ab.size()){
+
+                        ab.removeWrapper(Integer.parseInt(innerAnswer));
+                        System.out.println("Removed!\n");
+
+                    }else{
+
+                        System.out.println("Invalid Input: non-existent index\n");
+
+                    }
+
                     break;
 
+                //search for entry
                 case "d":
 
                     System.out.print("What are you looking for? ");
@@ -104,16 +121,19 @@ public class AddressBookApplication {
                     ab.search(innerAnswer);
                     break;
 
+                //list all existing entries
                 case "e":
 
                     ab.list();
                     break;
 
+                //exit the program
                 case "f":
 
                     System.out.print("Goodbye");
                     break;
 
+                //invalid input message
                 default:
 
                     System.out.println("Invalid Input: that menu selection does not exist\n");
@@ -141,7 +161,7 @@ public class AddressBookApplication {
     }
 
     /**
-     * init: generates AddressEntry(s) using a provided file and adds it to specified AddressBook ab
+     * generates AddressEntry(s) using a provided file and adds it to specified AddressBook ab
      * @param fileName the file name of the file in which the entries will be read off of
      * @param ab the name of the address book which you are adding the read entries into
      * @throws FileNotFoundException if the specified file cannot be found
@@ -151,6 +171,7 @@ public class AddressBookApplication {
 
         try{
 
+            //create an ArrayList of all the lines in the file
             int lineFromFileCount = 0;
             ArrayList<String> lineFromFile = new ArrayList<String>();
             File inFile = new File(fileName);
@@ -161,6 +182,7 @@ public class AddressBookApplication {
             }
             myReader.close();
 
+            //create AddressEntries from each line in the ArrayList
             while (lineFromFileCount < lineFromFile.size()){
 
                 AddressEntry temp = new AddressEntry(lineFromFile.get(lineFromFileCount), lineFromFile.get(lineFromFileCount + 1), lineFromFile.get(lineFromFileCount + 2), lineFromFile.get(lineFromFileCount + 3), lineFromFile.get(lineFromFileCount + 4), Integer.parseInt(lineFromFile.get(lineFromFileCount + 5)), lineFromFile.get(lineFromFileCount + 6), lineFromFile.get(lineFromFileCount + 7));
