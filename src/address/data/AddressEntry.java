@@ -125,7 +125,6 @@ public class AddressEntry {
         this.phone = phone;
     }
 
-
     /**
      * sets email
      * @param email the email address which you are setting to the entry
