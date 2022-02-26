@@ -95,9 +95,9 @@ class AddressBookTest {
         ab.add(second);
 
         Assertions.assertEquals(2, ab.size());
-        //ab.removeWrapper(0);
+        ab.removeWrapper(0);
         Assertions.assertEquals(1, ab.size());
-        //ab.removeWrapper(0);
+        ab.removeWrapper(0);
         Assertions.assertEquals(0, ab.size());
 
     }

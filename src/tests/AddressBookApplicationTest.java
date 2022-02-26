@@ -27,6 +27,7 @@ class AddressBookApplicationTest {
         fileab.add(first);
         fileab.add(second);
 
+        //direct path
         AddressBookApplication.init("C:\\Users\\User\\IdeaProjects\\AddressBookApplication\\src\\address\\data\\AddressInputDataFile.txt", ab);
 
         Assertions.assertFalse(first.toString().isEmpty());
