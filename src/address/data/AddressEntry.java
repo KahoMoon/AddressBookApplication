@@ -35,7 +35,7 @@ public class AddressEntry {
      * @param phone the phone number of the person
      * @param email the email address of the person
      */
-    public AddressEntry(String firstName, String lastName, String street, String city, String state, int zip, String email, String phone) {
+    public AddressEntry(String firstName, String lastName, String street, String city, String state, int zip, String phone, String email) {
 
         this.firstName = firstName;
         this.lastName = lastName;

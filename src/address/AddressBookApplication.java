@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Set;
 
 import address.data.AddressBook;
 import address.data.AddressEntry;
@@ -40,7 +41,7 @@ public class AddressBookApplication {
                     System.out.print("Enter the path of the file: ");
                     innerAnswer = in.nextLine();
                     init(innerAnswer, ab);
-                    System.out.print("Entries added from " + innerAnswer + "\n");
+                    System.out.println("Entries added from: " + innerAnswer + "\n");
                     ab.list();
                     break;
 
@@ -94,6 +95,10 @@ public class AddressBookApplication {
 
                     System.out.print("Goodbye");
                     break;
+
+                default:
+
+                    System.out.println("Invalid Input: that menu selection does not exist\n");
 
             }
 

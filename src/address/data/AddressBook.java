@@ -1,5 +1,7 @@
 package address.data;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * AddressBook class that stores collection of AddressEntries
@@ -62,9 +64,10 @@ public class AddressBook {
      * returns entries that contain the specified search prompt along with index
      * @param prompt the string you are searching for
      */
-    public void search(String prompt) {
+    public Set<Integer> search(String prompt) {
 
         int index = 0;
+        Set<Integer> indexList = new HashSet<Integer>();
 
         for (AddressEntry i : addressEntryList) {
 
@@ -76,9 +79,12 @@ public class AddressBook {
 
             }
 
+            indexList.add(index);
             index++;
 
         }
+
+        return indexList;
 
     }
 
