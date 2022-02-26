@@ -12,8 +12,15 @@ import java.util.Set;
 
 public class AddressBook {
 
-    ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();   //holds the AddressEntries
-    int size = 0;   //holds the number of elements
+    /**
+     * holds the AddressEntries
+     */
+    ArrayList<AddressEntry> addressEntryList = new ArrayList<AddressEntry>();
+
+    /**
+     * holds the number of elements
+     */
+    int size = 0;
 
     /**
      * returns the number of entries in the address book

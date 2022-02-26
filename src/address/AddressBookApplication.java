@@ -22,11 +22,30 @@ public class AddressBookApplication {
 
     public static void main(String args[]) {
 
-        Menu myMenu = new Menu();   //main Menu object
-        AddressBook ab = new AddressBook(); //main AddressBook object
-        String answer = "garbage";  //holds user input pertaining to the main menu selection
-        String innerAnswer;  //holds user input for functions within each menu case
-        Scanner in = new Scanner(System.in);    //object to read in user input
+        /**
+         * main Menu object
+         */
+        Menu myMenu = new Menu();
+
+        /**
+         * main AddressBook object
+         */
+        AddressBook ab = new AddressBook();
+
+        /**
+         * holds user input pertaining to the main menu selection
+         */
+        String answer = "garbage";
+
+        /**
+         * holds user input for function within each manu case
+         */
+        String innerAnswer;
+
+        /**
+         * object to read in user input
+         */
+        Scanner in = new Scanner(System.in);
 
         while(!answer.equalsIgnoreCase("f")) {
 

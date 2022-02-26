@@ -8,8 +8,15 @@ package address.data;
 
 public class AddressEntry {
 
-    private String firstName, lastName, street, city, state, phone, email;  //holds their respective info
-    private int zip;    //holds zip code
+    /**
+     * holds their respective info
+     */
+    private String firstName, lastName, street, city, state, phone, email;
+
+    /**
+     * holds the zip code
+     */
+    private int zip;
 
     /**
      * initializes all members variables of AddressEntry with appropriate placeholders

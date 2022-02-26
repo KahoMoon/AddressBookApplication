@@ -9,9 +9,20 @@ import java.util.Scanner;
 
 public class Menu {
 
-    Scanner in = new Scanner(System.in); //reads in input
-    String userInput;   //holds user input
-    boolean isValid = true; //for checking user input validity
+    /**
+     * reads in user input
+     */
+    Scanner in = new Scanner(System.in);
+
+    /**
+     * holds user input
+     */
+    String userInput;
+
+    /**
+     * for checking user input validity
+     */
+    boolean isValid = true;
 
     /**
      * generates a standard output prompt for the First Name to be entered and returns the user input
