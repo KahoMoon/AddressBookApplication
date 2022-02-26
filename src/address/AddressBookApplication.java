@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Set;
 
 import address.data.AddressBook;
 import address.data.AddressEntry;
@@ -64,18 +63,37 @@ public class AddressBookApplication {
 
                 case "c":
 
-                    AddressEntry remove = new AddressEntry();
+                    System.out.print("Which index are you removing? ");
+                    innerAnswer = in.nextLine();
+                    boolean isValid = true;
 
-                    remove.setFirstName(myMenu.prompt_FirstName());
-                    remove.setLastName(myMenu.prompt_LastName());
-                    remove.setStreet(myMenu.prompt_Street());
-                    remove.setCity(myMenu.prompt_City());
-                    remove.setState(myMenu.prompt_State());
-                    remove.setZip(myMenu.prompt_Zip());
-                    remove.setPhone(myMenu.prompt_Telephone());
-                    remove.setEmail(myMenu.prompt_Email());
+                    for(char c : innerAnswer.toCharArray()){
 
-                    ab.remove(remove);
+                        if(!Character.isDigit(c)) {
+                            isValid = false;
+                        }
+
+                    }
+
+                    while (!isValid){
+
+                        isValid = true;
+                        System.out.println("Invalid Input: contains a alphabetic character\n");
+                        System.out.print("Which index are you removing? ");
+                        innerAnswer = in.nextLine();
+
+                        for(char c : innerAnswer.toCharArray()){
+
+                            if(!Character.isDigit(c)) {
+                                isValid = false;
+                            }
+
+                        }
+
+                    }
+
+                    System.out.print("\n");
+                    ab.removeWrapper(Integer.parseInt(innerAnswer));
                     break;
 
                 case "d":

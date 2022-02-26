@@ -1,6 +1,7 @@
 package address.data;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 /**
@@ -51,11 +52,10 @@ public class AddressBook {
 
     /**
      * removes a specified entry from the address book
-     * @param addressEntry the entry you want to remove from the address book
      */
-    public void remove(AddressEntry addressEntry) {
+    public void removeWrapper(int index) {
 
-        addressEntryList.remove(addressEntry);
+        addressEntryList.remove(index);
         size--;
 
     }
@@ -73,9 +73,9 @@ public class AddressBook {
 
             if (i.getFirstName().toLowerCase().contains(prompt.toLowerCase()) || i.getLastName().toLowerCase().contains(prompt.toLowerCase()) || i.getStreet().toLowerCase().contains(prompt.toLowerCase()) || i.getCity().toLowerCase().contains(prompt.toLowerCase()) || i.getState().toLowerCase().contains(prompt.toLowerCase()) || i.getPhone().toLowerCase().contains(prompt.toLowerCase()) || i.getEmail().toLowerCase().contains(prompt.toLowerCase())) {
 
-                System.out.println("Index: " + index + "\n");
+                System.out.println("\nIndex: " + index + "\n");
                 System.out.println(i.toString());
-                System.out.println(("\n"));
+                System.out.print(("\n"));
 
             }
 
