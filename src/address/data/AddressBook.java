@@ -57,6 +57,7 @@ public class AddressBook {
 
     /**
      * removes a specified entry from a given index in the address book
+     * @param index the index of the entry to be removed
      */
     public void removeWrapper(int index) {
 
@@ -68,6 +69,7 @@ public class AddressBook {
     /**
      * returns set containing entries that have the specified search prompt along with index
      * @param prompt the string you are searching for
+     * @return a set containing all the indexes of entries relevant ot the search query
      */
     public Set<Integer> search(String prompt) {
 
@@ -97,6 +99,7 @@ public class AddressBook {
     /**
      * returns entries that contain the specified integer (zip) along with the index
      * @param prompt the integer you are searching for
+     * @return a set containing all the indexes of entries relevant ot the search query
      */
     //overloaded for when entering ZIP specifically
     public Set<Integer> search(int prompt) {

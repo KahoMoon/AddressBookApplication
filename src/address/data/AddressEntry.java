@@ -38,6 +38,7 @@ public class AddressEntry {
      * @param lastName the last name of the person
      * @param street the street where the person lives
      * @param state the state in which the person resides in
+     * @param city the city in which the person resides in
      * @param zip the zip code in which the person resides in
      * @param phone the phone number of the person
      * @param email the email address of the person
